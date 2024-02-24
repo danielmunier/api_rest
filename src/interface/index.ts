@@ -5,10 +5,19 @@ export interface IUser {
 }
 
 export interface IUserModel {
+    id: string
     name: string;
     email: string
-    hashedPassword: string
+    password: string,
+    createdAt: Date,
+    updateAt: Date
 }
+
+export interface RefreshTokenWhiteList {
+    jti: string;
+    refreshToken: string;
+    userId: string;
+  }
 
 
 
